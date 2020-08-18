@@ -53,7 +53,7 @@ What is your style for giving feedback? Does anything ever hold you back from gi
 
 What do you identify as being your biggest strength(s) technically, as they relate to this project? Where do you feel you could use improvement in your technical skills, as they relate to this project? How can our team help support you in improving these skills?
  - Lito: Solid test writing skills. Enjoy AR queries. Needs improvement in deployment, high level design, and github.
- - Taija: Debugging. Needs improvement in AR, and heroku debugging. Need improvement in documentation organization and structure.
+ - Taija: I feel pretty good about my debugging skills, except when it comes to Heroku. I would like to improve my Heroku skills, and my AR skills.  I would like to feel more comfortable making structural decisions, which could be related to feeling more confident about Rails applications as a whole.
 
 What tools do you want to use to manage the project?
  - Github project board. Use issues as documentation for what you did.
