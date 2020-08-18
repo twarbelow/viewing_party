@@ -37,7 +37,7 @@ How will we set direction and make decisions as a team?
 
 How will we overcome obstacles?
  - Lito: Bring up problems as they arise, not when it’s too late. Assume positive intent.
- - Taija: Be proactive about paired programming.
+ - Taija: Be proactive about paired programming, utilize our resources (colleagues, mentors, etc) efficiently, maintain intentional and open communication.
 
 What do you need (resources, environment, communication) to do your best work?
  - Lito: clear expectations on work and time schedule.
