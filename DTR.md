@@ -22,7 +22,7 @@ How do you communicate best? How do you appreciate receiving communication from 
 
 How would you describe your work style?
  - Lito: I think setting expectations early and often is the key to successful collaborative efforts. Generally I prefer to work alone, though it’s better to ask for help early rather than bang your head against a wall when you’re stuck.
- - Taija: Regular breaks are very important. Time-boxing a work schedule is also a priority.
+ - Taija: Due to being pregnant, I rely on regular breaks. I appreciate knowing at what time we will end for the day.
 
 What are each of our strengths? How can our strengths complement each other?
  - Lito: I really enjoy learning and enjoy trying to make sense of complicated structures.
