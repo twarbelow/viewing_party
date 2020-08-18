@@ -14,7 +14,7 @@ What are each of our learning goals for this project? What drives us in this pro
 
 What is your collaboration style? How do you feel about pair programming vs. divide-and-conquer approaches?
  - Lito: My preferred approach is discuss project execution strategy, work independently, and then meet again to review the work. Pair programming is great for debugging.
- - Taija: More emphasis on paired programming. It can be easier to avoid unproductive struggle while working together.
+ - Taija: More emphasis on paired programming. It can be easier to avoid unproductive struggle while working together, and gives alternative approaches that facilitate learning.
 
 How do you communicate best? How do you appreciate receiving communication from others?
  - Lito: I think it’s best to set daily meet times to review the project and determine the next steps
