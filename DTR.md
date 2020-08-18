@@ -36,7 +36,7 @@ How will we set direction and make decisions as a team?
  - Review the project documentation, establish a milestone schedule, and see if it makes more sense to divide and conquer or to work together.
 
 How will we overcome obstacles?
- - Lito: Bring up problems as they arise, not till it’s too late. Assume positive intent.
+ - Lito: Bring up problems as they arise, not when it’s too late. Assume positive intent.
  - Taija: Be proactive about paired programming.
 
 What do you need (resources, environment, communication) to do your best work?
