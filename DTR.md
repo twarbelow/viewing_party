@@ -60,7 +60,7 @@ What tools do you want to use to manage the project?
 
 How do you want the group to solve problems when members run into issues with features of the project?
  - Lito: look at the code on a zoom call to see what the issues are. If we can’t figure it out together, then other team members can look at it independently to see if any light bulbs go off.
- - Taija: work my way up the food chain. Partner, mentor, sister, husband, teacher.
+ - Taija: 1. google 2. pair programming with partner 3. ask for assistance from cohort 4. ask a mentor 5. reach out to contacts (family) 6. pair programming with instructor
 
 How do you know if a project is successful? How can we achieve that as a group?
  - Lito: If we met the expectations, learned a lot in the process, and if everybody stayed on the same page.
