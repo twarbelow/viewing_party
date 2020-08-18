@@ -41,7 +41,7 @@ How will we overcome obstacles?
 
 What do you need (resources, environment, communication) to do your best work?
  - Lito: clear expectations on work and time schedule.
- - Taija: Know what’s expected and when it’s due. Require regular breaks.
+ - Taija: I appreciate knowing what is expected of me from my partner (both work wise and time wise), and I need regular breaks.
 
 What scheduling restraints do you have? What are your scheduling preferences?
  - Lito: Generally, I try to reserve 5-6pm for personal time. I am usually in front of the computer by 7am. Weekends are available - preference to have one day off.
