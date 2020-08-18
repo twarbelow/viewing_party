@@ -49,7 +49,7 @@ What scheduling restraints do you have? What are your scheduling preferences?
 
 What is your style for giving feedback? Does anything ever hold you back from giving feedback?
  - Lito: I try to see where the other person is coming from before making assumptions.
- - Taija: “I” vs “You” feedback. Make it actionable.
+ - Taija: I try to take responsibility for my reactions when giving feedback and frame it in a way that balances responsibility or weights it towards myself while asking for help from you. I try to make my feedback specific, actionable, and kind. Initial negative reactions can prevent me from feeling comfortable giving feedback in the future. If a negative reaction happens, and I try to address it in a calm and precise manner, but receive an initial defensive or negative reaction, then I am unlikely to offer feedback or opinions after that interaction. 
 
 What do you identify as being your biggest strength(s) technically, as they relate to this project? Where do you feel you could use improvement in your technical skills, as they relate to this project? How can our team help support you in improving these skills?
  - Lito: Solid test writing skills. Enjoy AR queries. Needs improvement in deployment, high level design, and github.
