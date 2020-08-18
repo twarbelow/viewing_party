@@ -18,7 +18,7 @@ What is your collaboration style? How do you feel about pair programming vs. div
 
 How do you communicate best? How do you appreciate receiving communication from others?
  - Lito: I think it’s best to set daily meet times to review the project and determine the next steps
- - Taija: Appreciate proactive feedback earlier than later.
+ - Taija: I appreciate proactive feedback earlier rather than later. I may seem hurt initially, but I promise to take the time to listen and consider your point of view fairly. I'll get over it quickly.
 
 How would you describe your work style?
  - Lito: I think setting expectations early and often is the key to successful collaborative efforts. Generally I prefer to work alone, though it’s better to ask for help early rather than bang your head against a wall when you’re stuck.
