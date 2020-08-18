@@ -30,7 +30,7 @@ What are each of our strengths? How can our strengths complement each other?
 
 What’s gone well or poorly in your previous projects?
  - Lito: Regular effective check-in meetings have helped clarify expectations and have kept team members aligned toward project goals. Communicating github workflow helps.
- - Taija: Making sure everybody is aware of their expectations, along with communicating about milestones achieved/upcoming PRs, etc. Need to be more communicative about time constraints.
+ - Taija: Making sure everybody is aware of their expectations, along with communicating about milestones achieved/upcoming PRs, etc, has been effective in the past. I have been made aware that I could be more communicative about time constraints.
 
 How will we set direction and make decisions as a team?
  - Review the project documentation, establish a milestone schedule, and see if it makes more sense to divide and conquer or to work together.
