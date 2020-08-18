@@ -45,7 +45,7 @@ What do you need (resources, environment, communication) to do your best work?
 
 What scheduling restraints do you have? What are your scheduling preferences?
  - Lito: Generally, I try to reserve 5-6pm for personal time. I am usually in front of the computer by 7am. Weekends are available - preference to have one day off.
- - Taija: No commitments before class. No work during lunch. Try to stop computer work by 8pm.
+ - Taija: Prefer not to commit to pairing before class or during lunch unless absolutely necessary. I generally refrain from tech work after 8pm. All of these are flexible if the project absolutely requires it.
 
 What is your style for giving feedback? Does anything ever hold you back from giving feedback?
  - Lito: I try to see where the other person is coming from before making assumptions.
