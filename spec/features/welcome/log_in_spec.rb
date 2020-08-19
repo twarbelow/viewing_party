@@ -7,6 +7,8 @@ feature "log in" do
   end
 
   it "allows a user to log in with OmniAuth Google" do
-
+    visit '/'
+    click_on "Log In With Google"
+    expect(current_path).to eq('/auth/google')
   end
 end
