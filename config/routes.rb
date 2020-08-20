@@ -3,5 +3,5 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
 
-  get '/auth/google', to: 'session#create'
+  get '/auth/:provider/callback', to: 'session#create'
 end
