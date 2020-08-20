@@ -7,7 +7,14 @@ RSpec.feature "user logs in" do
     expect(page).to have_link("Sign in with Google")
     click_link "Sign in with Google"
 
-    expect(page).to have_content("Lito White")
+    expect(page).to have_content("Welcome Lito White!")
+    expect(page).to have_css('.movies')
+    expect(page).to have_css('.friends')
+    expect(page).to have_css('.viewing_parties')
+    within ".movies" do
+      expect(page).to have_selector(:button, "Discover Movies")
+    end
+
     expect(page).to have_link("Logout")
   end
 
@@ -24,7 +31,7 @@ RSpec.feature "user logs in" do
         credentials: {
           token: "abcdefg12345",
           refresh_token: "12345abcdefg",
-          expires_at: DateTime.now,
+          expires_at: "063021",
         }
       })
     end
