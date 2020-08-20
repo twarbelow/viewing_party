@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
       credentials: {
         token: "abcdefg12345",
         refresh_token: "12345abcdefg",
-        expires_at: DateTime.now.utc
+        expires_at: "Thu, 20 Aug 2020 22:37:08 UTC +00:00"
       }
     }
 
