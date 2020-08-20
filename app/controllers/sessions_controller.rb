@@ -5,6 +5,6 @@ class SessionsController < ApplicationController
     client_secret = ENV["GOOGLE_CLIENT_SECRET"]
     code = params[:code]
     #response = Faraday.post
-    #binding.pry
+    binding.pry
   end
 end

@@ -16,6 +16,7 @@ RSpec.describe User, type: :model do
         expires_at: DateTime.now
       }
     }
+    
     User.update_or_create(auth)
     new_user = User.first
 
