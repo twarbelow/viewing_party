@@ -3,8 +3,8 @@ Rails.application.routes.draw do
 
   root to: 'welcome#index'
 
-  get "/auth/google_oauth2/callback", to: "sessions#create"
-  #get "auth/:provider/callback", to: "sessions#create"
+  #get "/auth/google_oauth2/callback", to: "sessions#create"
+  get "auth/:provider/callback", to: "sessions#create"
   get 'logout', to: "sessions#destroy"
 
 end

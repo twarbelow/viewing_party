@@ -9,6 +9,9 @@ RSpec.feature "user logs in" do
 
     expect(page).to have_content("Lito White")
     expect(page).to have_link("Logout")
+    click_link("Logout")
+
+    expect(page).to have_content("Sign in with Google")
   end
 
   def stub_omniauth

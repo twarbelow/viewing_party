@@ -3,6 +3,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   ENV['GOOGLE_CLIENT_ID'],
   ENV['GOOGLE_CLIENT_SECRET'], {
     :prompt => 'select_account',
-    :scope => ['email','profile', 'calendar'],
+    :scope => ['email','profile','calendar'],
   }
 end
