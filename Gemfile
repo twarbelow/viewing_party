@@ -15,9 +15,15 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
 gem 'bootsnap'
 gem 'jbuilder', '~> 2.5'
+<<<<<<< HEAD
 gem 'omniauth-google-oauth2'
 gem 'figaro'
 gem 'faraday'
+=======
+gem 'faraday'
+gem 'figaro'
+gem 'omniauth-google-oauth2'
+>>>>>>> bb177fcb45aa1c2b480946a480d3aef12b53f37f
 
 group :development, :test do
   gem 'pry'
