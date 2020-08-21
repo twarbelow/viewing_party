@@ -1,0 +1,9 @@
+<%= button_to "Top Rated Movies", "/", method: :get %>
+
+<section class="form">
+  <%= form_with(url: "/", method: "get") do %>
+    <%= label_tag(:q, "Search for:") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Find Movies") %>
+  <% end %>
+</section>
