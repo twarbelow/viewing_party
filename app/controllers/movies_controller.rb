@@ -5,7 +5,8 @@ class MoviesController < ApplicationController
   end
 
   def top_rated
-    redirect_to discover_path
+    @movies = MovieDb.new.top_rated
+    #redirect_to discover_path
   end
 
   def search
