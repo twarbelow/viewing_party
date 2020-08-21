@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'faraday'
 gem 'figaro'
 gem 'omniauth-google-oauth2'
+gem 'google-api-client'
 
 group :development, :test do
   gem 'pry'
