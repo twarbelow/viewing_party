@@ -7,8 +7,8 @@ RSpec.feature "As a user" do
     expect(page).to have_link("Sign in with Google")
     click_link "Sign in with Google"
 
-    expect(page).to have_button("Discovery Movies")
-    click_button("Discovery Movies")
+    expect(page).to have_button("Discover Movies")
+    click_button("Discover Movies")
     expect(current_path).to eq("/discover")
   end
 
