@@ -4,6 +4,8 @@ class MovieDb
     response = conn.get("movie/top_rated")
     JSON.parse(response.body, symbolize_names: true)[:results]
   end
+
+  
   private
 
   def conn
