@@ -1,9 +1,11 @@
-<%= button_to "Top Rated Movies", "/", method: :get %>
+<%= button_to "Top Rated Movies", top_rated_path, method: :get %>
 
 <section class="form">
-  <%= form_with(url: "/", method: "get") do %>
+  <%= form_with(url: search_path, method: "get") do %>
     <%= label_tag(:q, "Search for:") %>
     <%= text_field_tag(:q) %>
     <%= submit_tag("Find Movies") %>
   <% end %>
 </section>
+
+<% #@movies table goes here %>

@@ -4,5 +4,12 @@ class MoviesController < ApplicationController
   def index
   end
 
+  def top_rated
+    redirect_to discover_path
+  end
+
+  def search
+    redirect_to discover_path
+  end
 
 end

@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get "auth/:provider/callback", to: "sessions#create"
   get 'logout', to: "sessions#destroy"
   get "discover", to: "movies#index"
+  get "search", to: "movies#search"
+  get "top_rated", to: "movies#top_rated"
 end
