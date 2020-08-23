@@ -1,10 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe "as an authorized user" do
-  before do
-    login_as_user
-  end
-
   def stub_omniauth
     OmniAuth.config.test_mode = true
     OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
