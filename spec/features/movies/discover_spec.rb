@@ -24,8 +24,8 @@ RSpec.describe "as an authorized user" do
     visit root_path
     click_link "Sign in with Google"
 
-    expect(page).to have_link("Discover Movies")
-    click_link "Discover Movies"
+    expect(page).to have_button("Discover Movies")
+    click_button "Discover Movies"
 
     expect(current_path).to eq("/movies/discover")
     expect(page).to have_link("Find Top-Rated Movies")
