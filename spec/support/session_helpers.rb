@@ -26,6 +26,10 @@ module SessionHelpers
       click_link "Sign in with Google"
     end.to change { User.count }.by(1)
   end
+
+  def current_user
+    User.find_by(email: 'lito@gmail.com')
+  end
 end
 
 RSpec.configure do |config|

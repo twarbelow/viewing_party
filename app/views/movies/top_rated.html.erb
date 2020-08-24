@@ -19,7 +19,7 @@
   </tr>
 <% @movies.each do |movie| %>
   <tr>
-    <td><%= movie[:title] %></td>
+    <td><%= link_to "#{movie[:title]}", movie_show_path(id: movie[:id]) %></td>
     <td><%= movie[:vote_average] %></td>
     <td><%= movie[:overview] %></td>
     <td><%= movie[:poster_path] %></td>

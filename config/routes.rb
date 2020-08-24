@@ -9,4 +9,7 @@ Rails.application.routes.draw do
   get "discover", to: "movies#index"
   get "search", to: "movies#search"
   get "top_rated", to: "movies#top_rated"
+  post "add_friends", to: "friends#create"
+  post "add_to_calendar", to: "calendars#create"
+  get "movie_show", to: "movies#show"
 end

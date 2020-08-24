@@ -15,9 +15,14 @@
 <section class ="movies">
   <%= button_to "Discover Movies", discover_path, method: :get %>
 </section>
-<section class ="friends">
-  Friends
-  </section>
+<section class="add_friends">
+  <%= form_with(url: add_friends_path, method: "post", id: 'friends') do %>
+    <%= label_tag(:email_id, "Add friend (email address):") %>
+    <%= text_field_tag(:email_id) %>
+    <%= submit_tag("Add Friend") %>
+  <% end %>
+</section>
 <section class ="viewing_parties">
-  Viewing Parties
-  </section>
+  Parties You're Invited To:
+
+</section>

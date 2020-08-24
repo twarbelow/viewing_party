@@ -1,6 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
+
   it "creates or updates itself from an oauth hash" do
     auth = {
       provider: "google",
@@ -16,7 +17,7 @@ RSpec.describe User, type: :model do
         expires_at: DateTime.now
       }
     }
-    
+
     User.update_or_create(auth)
     new_user = User.first
 

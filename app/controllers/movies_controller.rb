@@ -13,4 +13,9 @@ class MoviesController < ApplicationController
     redirect_to discover_path
   end
 
+  def show
+    @movie = MovieDb.new.movie_details(params[:id])
+  end
+
+
 end

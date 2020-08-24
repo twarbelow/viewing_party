@@ -5,7 +5,12 @@ class MovieDb
     JSON.parse(response.body, symbolize_names: true)[:results]
   end
 
-  
+  def movie_details(id)
+    response = conn.get("movie/#{id}")
+    JSON.parse(response.body, symbolize_names:true)
+  end
+
+
   private
 
   def conn
