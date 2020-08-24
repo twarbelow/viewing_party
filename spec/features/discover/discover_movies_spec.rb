@@ -15,8 +15,10 @@ RSpec.feature "As a user" do
   # end
 
   scenario "Clicking on the Top 40 Rated Movies Button will return a table of those movies" do
-    visit movies_discover_path
-    click_button("Find Top-Rated Movies")
-    expect(page.all('table tr').count).to eq(21)
+    VCR.use_cassette('top_rated_content') do
+      visit movies_discover_path
+      click_button("Find Top-Rated Movies")
+      expect(page.all('table tr').count).to eq(21)
+    end
   end
 end
