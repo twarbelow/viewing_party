@@ -1,7 +1,7 @@
 class MoviesController < ApplicationController
-    def index; end
-
-    def search
-      
+  def index
+    if params[:query] != nil
+      @results = MovieDB.new.search(params[:query])
     end
+  end
 end

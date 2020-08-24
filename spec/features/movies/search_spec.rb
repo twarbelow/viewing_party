@@ -24,14 +24,14 @@ RSpec.describe "as an authorized user" do
       visit root_path
       click_link "Sign in with Google"
 
-      visit movies_search_path
+      visit movies_discover_path
 
       expect(page).to have_content("Search All Movies")
-      fill_in "Search", with: "Star Wars"
-      click_button "Search"
+      fill_in "query", with: "Star Wars"
+      click_button "Find Movies"
 
-      expect(current_path).to eq("/movies/search/results")
-      expect(page).to have_button_or_link("Find Top Rated Movies")
+      expect(current_path).to eq(movies_search_results_path)
+      expect(page).to have_link("Find Top-Rated Movies")
       expect(page).to have_css(".result", count: 40)
       expect(page).to have_css(".form")
   end

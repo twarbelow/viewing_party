@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'logout', to: "sessions#destroy"
   get '/movies/discover', to: 'movies#index'
   get '/movies/search', to: "movies#search"
+  get '/movies/search/results', to: 'movies#index'
   get '/movies/top_rated', to: 'movies#top_rated'
 
 end
