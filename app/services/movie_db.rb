@@ -36,8 +36,12 @@ class MovieDB
   def conn
     @conn ||= Faraday.new(
       url: 'https://api.themoviedb.org/3/',
-      params: {api_key: ENV['MOVIEDB_API_KEY']},
-      headers: {'Content-Type' => 'application/json'}
+      params: {
+        api_key: ENV['MOVIEDB_API_KEY']
+      },
+      headers: {
+        'Content-Type' => 'application/json'
+      }
     )
   end
 end
