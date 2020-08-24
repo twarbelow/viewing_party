@@ -1,9 +1,9 @@
 class MoviesController < ApplicationController
   def index
-    unless params[:query].nil?
-      @results = MovieDB.new.search(params[:query]).map do |movie|
-        Movie.new(movie)
-      end
-    end
+    @results = MovieDB.new.search(params[:query]).map { |movie| Movie.new(movie) } unless params[:query].nil?
+  end
+
+  def top_rated
+
   end
 end

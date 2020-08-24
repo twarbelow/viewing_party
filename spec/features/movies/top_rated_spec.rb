@@ -24,7 +24,7 @@ RSpec.describe "as an authorized user" do
     visit root_path
     click_link "Sign in with Google"
 
-    click_link "Discover Movies"
+    click_button "Discover Movies"
 
     click_link ("Find Top-Rated Movies")
 
