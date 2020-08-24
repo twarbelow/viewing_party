@@ -3,8 +3,8 @@
 <section class="description">
   <p>Welcome to Covid Viewing! Your favorite site for finding your next covid watch party movie, and scheduling a time to watch it with all your friends!</p>
 </section>
-<% if current_user %>
 <%= render partial: "/partials/nav_bar" %>
+<% if current_user %>
   <p>
     Welcome <%= "#{current_user.first_name} #{current_user.last_name}" %>
   </p>

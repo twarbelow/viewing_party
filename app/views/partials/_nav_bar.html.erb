@@ -1,12 +1,14 @@
-<section class ="movies">
-  <%= button_to "Discover Movies", discover_path, method: :get %>
-</section>
-<section class ="friends">
-  Friends
+<% if current_user %>
+  <section class ="movies">
+    <%= button_to "Discover Movies", discover_path, method: :get %>
   </section>
-<section class ="viewing_parties">
-  Viewing Parties
-</section>
-<section class="log-out">
-  <%= link_to "Logout", logout_path %>
-</section>
+  <section class ="friends">
+    Friends
+    </section>
+  <section class ="viewing_parties">
+    Viewing Parties
+  </section>
+  <section class="log-out">
+    <%= link_to "Logout", logout_path %>
+  </section>
+<% end %>
