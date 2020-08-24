@@ -28,10 +28,10 @@ RSpec.describe "as an authorized user" do
     click_button "Discover Movies"
 
     save_and_open_page
-    
+
     expect(current_path).to eq("/movies/discover")
     expect(page).to have_link("Find Top-Rated Movies")
-    expect(page).to hace_css(".find-movies")
+    expect(page).to have_css(".find-movies")
     expect(page).to have_button("Find Movies")
   end
 end
