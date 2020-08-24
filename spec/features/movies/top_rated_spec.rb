@@ -26,7 +26,7 @@ RSpec.describe "as an authorized user" do
 
     click_button "Discover Movies"
 
-    click_link ("Find Top-Rated Movies")
+    click_button ("Find Top-Rated Movies")
 
     expect(page).to have_css(".top-movie", count: 40)
 

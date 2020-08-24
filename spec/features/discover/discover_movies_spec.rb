@@ -15,8 +15,8 @@ RSpec.feature "As a user" do
   # end
 
   scenario "Clicking on the Top 40 Rated Movies Button will return a table of those movies" do
-    visit discover_path
-    click_button("Top Rated Movies")
+    visit movies_discover_path
+    click_button("Find Top-Rated Movies")
     expect(page.all('table tr').count).to eq(21)
   end
 end

@@ -6,7 +6,7 @@
 <%= render partial: "/partials/nav_bar" %>
 <% if current_user %>
   <p>
-    Welcome <%= "#{current_user.first_name} #{current_user.last_name}" %>
+    Welcome <%= "#{current_user.first_name} #{current_user.last_name}!" %>
   </p>
 <% else %>
   <%= link_to "Sign in with Google", "/auth/google_oauth2" %>

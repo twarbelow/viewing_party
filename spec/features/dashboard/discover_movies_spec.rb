@@ -9,7 +9,7 @@ RSpec.feature "As a user" do
 
     expect(page).to have_button("Discover Movies")
     click_button("Discover Movies")
-    expect(current_path).to eq("/discover")
+    expect(current_path).to eq("/movies/discover")
   end
 
   def stub_omniauth
