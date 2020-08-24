@@ -20,17 +20,6 @@ RSpec.describe "as an authorized user" do
   end
 
   it "I can search the movies and see the first 40 results" do
-    # json_response = File.read('spec/fixtures/star_wars_search.json')
-    # stub_request(:get, "https://api.themoviedb.org/3/search/movie?api_key=5f797e906ade46b8521c83edea255f00&page=1&query=Star%20Wars&sort_by=p
-    # opularity.desc").
-    #          with(
-    #            headers: {
-    #           'Accept'=>'*/*',
-    #           'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
-    #           'Content-Type'=>'application/json',
-    #           'User-Agent'=>'Faraday v1.0.1'
-    #            }).
-    #          to_return(status: 200, body: json_response, headers: {})
     VCR.use_cassette('star_wars_search') do
       stub_omniauth
       visit root_path
