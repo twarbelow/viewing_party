@@ -11,3 +11,11 @@
     <%= submit_tag("Find Movies") %>
   <% end %>
 </section>
+<% if @results %>
+  <section class="all-search-results">
+    <ul>
+      <%= @results.each do |result| %>
+      <li class="result">
+        <%= binding.pry %>
+  </section>
+<% end %>
