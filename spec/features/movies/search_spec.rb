@@ -30,6 +30,7 @@ RSpec.describe "as an authorized user" do
       fill_in "Search", with: "Star Wars"
       click_button "Search"
 
+      expect(current_path).to eq("/movies")
       expect(page).to have_button_or_link("Find Top Rated Movies")
       expect(page).to have_css(".result", count: 40)
       expect(page).to have_css(".form")
