@@ -7,7 +7,7 @@ class FriendsController < ApplicationController
       current_user.add_friend(friend)
       flash[:notice] = "#{friend.first_name} has been added as your friend"
     else
-      flash[:alert] = "There is no user with that email address"
+      flash[:alert] = 'There is no user with that email address'
     end
     redirect_to root_path
   end

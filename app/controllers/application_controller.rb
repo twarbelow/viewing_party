@@ -9,9 +9,9 @@ class ApplicationController < ActionController::Base
 
   def verify_current_user
     if current_user
-      return current_user
+      current_user
     else
-      flash[:error] = "Please sign in"
+      flash[:error] = 'Please sign in'
       redirect_to root_path
     end
   end
