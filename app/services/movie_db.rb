@@ -3,6 +3,7 @@ class MovieDB
     @response1 = []
     @response2 = []
   end
+  
   def search(query)
     search_responses(query)
     # response_1 = conn.get("/3/search/movie?api_key=#{ENV['MOVIEDB_API_KEY']}&sort_by=popularity.desc&page=1&query=#{query}")
@@ -29,7 +30,7 @@ class MovieDB
   end
 
   def top_rated
-    response = conn.get("movie/top_rated")
+    response = conn.get('movie/top_rated')
     JSON.parse(response.body, symbolize_names: true)[:results]
   end
 
@@ -37,7 +38,7 @@ class MovieDB
 
   def conn
     @conn ||= Faraday.new(
-      url: "https://api.themoviedb.org/3/",
+      url: 'https://api.themoviedb.org/3/',
       params: {api_key: ENV['MOVIEDB_API_KEY']},
       headers: {'Content-Type' => 'application/json'}
     )
