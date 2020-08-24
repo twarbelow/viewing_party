@@ -24,7 +24,7 @@ RSpec.describe "as an authorized user" do
       visit root_path
       click_link "Sign in with Google"
 
-      visit search_path
+      visit movies_search_path
 
       expect(page).to have_content("Search All Movies")
       fill_in "Search", with: "Star Wars"
