@@ -1,0 +1,9 @@
+<%= render partial: "/partials/nav_bar" %>
+
+<section class="find-movies"
+  <%= form_with(url: search_path, method: "get") do %>
+  <%= label_tag(:query, "Search for: ") %>
+  <%= text_field_tag(:query) %>
+  <%= submit_tag("Find Movies") %>
+  <% end %>
+</section>
