@@ -45,7 +45,7 @@ RSpec.describe "as an authorized user" do
       expect(current_path).to eq(movies_search_results_path)
       expect(page).to have_link("Find Top-Rated Movies")
       expect(page).to have_css(".result", count: 40)
-      expect(page).to have_css(".form")
+      expect(page).to have_css(".find-movies")
     end
   end
 end

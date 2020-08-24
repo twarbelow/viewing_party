@@ -14,9 +14,12 @@
 <% if @results %>
   <section class="all-search-results">
     <ul>
-      <%= @results.each do |result| %>
-      <li class="result">
-        <%# <%= binding.pry %> %>
+      <% @results.each do |movie| %>
+        <div class="result">
+          <p>Title: <%= link_to "#{movie.title}" %></p>
+          <p>Average rating: <%= movie.vote_average %></p>
+          <br>
+        </div>
       <% end %>
   </section>
 <% end %>
