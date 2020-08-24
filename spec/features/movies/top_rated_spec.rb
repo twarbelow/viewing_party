@@ -27,5 +27,14 @@ RSpec.describe "as an authorized user" do
     click_link "Discover Movies"
 
     click_link ("Find Top-Rated Movies")
+
+    expect(page).to have_css(".top-movie", count: 40)
+
+    within(".top-movie", match: :first) do
+      expect(page).to have_content("Title: ")
+      expect(page).to have_css(".title-link", count: 1)
+      expect(page).to have_content("Vote Average: ")
+    end
+
   end
 end
