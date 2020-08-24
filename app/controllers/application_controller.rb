@@ -6,4 +6,13 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user ||= User.find(session[:id]) if session[:id]
   end
+
+  def verify_current_user
+    if current_user
+      current_user
+    else
+      flash[:error] = 'Please sign in'
+      redirect_to root_path
+    end
+  end
 end

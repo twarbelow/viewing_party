@@ -1,4 +1,4 @@
-class MovieDB
+class MovieDb
   def initialize
     @response1 = []
     @response2 = []
@@ -29,6 +29,11 @@ class MovieDB
   def top_rated
     response = conn.get('movie/top_rated')
     JSON.parse(response.body, symbolize_names: true)[:results]
+  end
+
+  def movie_details(id)
+    response = conn.get("movie/#{id}")
+    JSON.parse(response.body, symbolize_names: true)
   end
 
   private

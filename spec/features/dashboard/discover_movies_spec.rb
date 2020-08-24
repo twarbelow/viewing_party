@@ -1,21 +1,15 @@
 require 'rails_helper'
 
-RSpec.feature "user logs in" do
-  scenario "using google oauth2" do
+RSpec.feature "As a user" do
+  scenario "I click on a link on my dashboard that takes me to a movie discovery page" do
     stub_omniauth
     visit root_path
     expect(page).to have_link("Sign in with Google")
     click_link "Sign in with Google"
 
-    expect(page).to have_content("Welcome Lito White!")
-    expect(page).to have_css('.movies')
-    expect(page).to have_css('.friends')
-    expect(page).to have_css('.viewing_parties')
-    within ".movies" do
-      expect(page).to have_selector(:button, "Discover Movies")
-    end
-
-    expect(page).to have_link("Logout")
+    expect(page).to have_button("Discover Movies")
+    click_button("Discover Movies")
+    expect(current_path).to eq("/discover")
   end
 
   def stub_omniauth
