@@ -1,9 +1,4 @@
 class MovieDb
-  def initialize
-    @response1 = []
-    @response2 = []
-  end
-
   def search(query)
     search_responses(query)
     first_40_results(@response1, @response2)
@@ -41,6 +36,7 @@ class MovieDb
     info = movie_info_request(id)
     reviews = movie_reviews_request(id)
     credits = movie_credits_request(id)
+
   end
 
   def movie_info_request(id)
