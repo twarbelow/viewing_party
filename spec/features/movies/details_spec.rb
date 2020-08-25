@@ -5,7 +5,33 @@ RSpec.feature 'As a user' do
     login_as_user
   end
 
-  scenario "Clicking on the title of a movie on the movie results page will send me to the movie show page" do
+  scenario "clicking on the title of a movie from either the top rated or search results will show me that movie's show page with details" do
+    VCR.use_cassette('star_wars_search', :match_requests_on => [:method, :path]) do
+      visit movies_discover_path
+
+      fill_in "query", with: "Star Wars"
+      click_button "Find Movies"
+
+      click_link "Star Wars"
+      expect(page).to have_css('.title')
+      expect(page).to have_css('.vote-average')
+      expect(page).to have_css('.runtime')
+      expect(page).to have_css('.genre')
+      expect(page).to have_css('.description-summary')
+      expect(page).to have_css('.first-10-cast')
+      expect(page).to have_css('.review-count')
+      expect(page).to have_css('.reviews')
+
+      # Movie Title
+      # Vote Average of the movie
+      # Runtime in hours & minutes
+      # Genere(s) associated to movie
+      # Summary description
+      # List the first 10 cast members (characters&actress/actors --> character: actress/ors)
+      # Count of total reviews
+      # Each review author and information
+    end
+
     VCR.use_cassette('top_rated_content', :match_requests_on => [:method, :path]) do
       visit movies_discover_path
 
