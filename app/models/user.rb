@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_many :friendships, dependent: :destroy
   has_many :friends, through: :friendships
+  has_many :viewing_parties
 
   def self.update_or_create(auth)
     User.find_by(uid: auth[:uid]) || new_user(auth)

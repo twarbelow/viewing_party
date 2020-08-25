@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   get '/movies/search/results', to: 'movies#index'
   get '/movies/top_rated', to: 'movies#top_rated'
   get "movie_show", to: "movies#show"
-  get "new_viewing_party", to: "viewing_parties#new"
+  get "new_viewing_party", to: "view_parties#new"
+  post "view_parties", to: 'view_parties#create'
 end

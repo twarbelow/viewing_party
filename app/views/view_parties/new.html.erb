@@ -1,0 +1,17 @@
+<h1>Create Viewing Party</h1>
+<h3><%= @viewing_party.movie_title %></h3>
+
+<%= form_for @viewing_party do |f| %>
+  <%= f.label :movie_title %>
+  <%= f.text_field :movie_title, :readonly => true %><br>
+  <%= f.label :duration %>
+  <%= f.number_field :duration %><br>
+  <%= f.label :when, "Date and Time" %>
+  <%= f.datetime_local_field :when %><br>
+  <% if current_user.friends.count.zero? %>
+    <p> You dont have any friends </p>
+  <% else %>
+    <%= f.collection_check_boxes(:user_ids, current_user.friends, :id, :first_name) %>
+  <% end %>
+<%= f.submit %>
+<% end %>
