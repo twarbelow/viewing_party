@@ -11,7 +11,7 @@ RSpec.feature 'As a user' do
 
       click_button("Find Top-Rated Movies")
     end
-    VCR.use_cassette('godfather_content') do
+    VCR.use_cassette('godfather_content', :match_requests_on => [:method, :path]) do
       click_link "The Godfather"
 
       expect(page).to have_content("The Godfather")
