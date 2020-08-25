@@ -1,29 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe "as an authorized user" do
-  def stub_omniauth
-    OmniAuth.config.test_mode = true
-    OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
-      provider: "google",
-      uid: "12345678910",
-      info: {
-        email: "lito@gmail.com",
-        first_name: "Lito",
-        last_name: "White"
-      },
-      credentials: {
-        token: "abcdefg12345",
-        refresh_token: "12345abcdefg",
-        expires_at: DateTime.now,
-      }
-    })
-  end
-
   it "I can search the movies and see the first 40 results" do
-    VCR.use_cassette('star_wars_search') do
-      stub_omniauth
-      visit root_path
-      click_link "Sign in with Google"
+    VCR.use_cassette('star_wars_search', :match_requests_on => [:method, :path]) do
+      login_as_user
 
       visit movies_discover_path
 
