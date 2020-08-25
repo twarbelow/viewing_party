@@ -18,7 +18,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'faraday'
 gem 'figaro'
 gem 'omniauth-google-oauth2'
-gem 'google-api-client'
+
+gem 'google-api-client', '~> 0.34'
 
 group :development, :test do
   gem 'pry'
@@ -37,6 +38,9 @@ group :test do
   gem 'capybara'
   gem 'launchy'
   gem 'simplecov'
+  gem 'shoulda-matchers'
+  gem 'webmock'
+  gem 'vcr'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

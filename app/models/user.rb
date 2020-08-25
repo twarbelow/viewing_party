@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  has_many :friendships, dependent: :destroy
+  has_many :friends, through: :friendships
+
   def self.update_or_create(auth)
     User.find_by(uid: auth[:uid]) || new_user(auth)
   end
@@ -19,5 +22,10 @@ class User < ApplicationRecord
       refresh_token: auth[:credentials][:refresh_token],
       oauth_expires_at: auth[:credentials][:expires_at]
     }
+  end
+
+  def add_friend(person)
+    friends << person
+    person.friends << self
   end
 end
