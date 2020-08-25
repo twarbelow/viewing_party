@@ -14,6 +14,7 @@ RSpec.feature 'As a user' do
 
       click_link "Star Wars"
       expect(page).to have_css('.title')
+      expect(page).to have_css('.tag-line')
       expect(page).to have_css('.vote-average')
       expect(page).to have_css('.runtime')
       expect(page).to have_css('.genre')
