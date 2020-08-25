@@ -3,4 +3,4 @@
 <%= @movie[:release_date] %><br>
 <%= @movie[:overview] %><br><br>
 
-<%= button_to "Create Viewing Party", viewing_party_path, method: :post %>
+<%= button_to "Create Viewing Party", new_viewing_party_path(id: @movie[:id]), method: :get %>

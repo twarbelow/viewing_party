@@ -18,10 +18,10 @@ RSpec.feature 'As a user' do
       expect(page).to have_content("The Godfather")
       expect(page).to have_content("An offer you can't refuse")
       expect(page).to have_button("Create Viewing Party")
-      
+      click_button "Create Viewing Party"
     end
 
-
+  
 
   end
 end
