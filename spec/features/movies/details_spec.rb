@@ -6,7 +6,7 @@ RSpec.feature 'As a user' do
   end
 
   scenario "Clicking on the title of a movie on the movie results page will send me to the movie show page" do
-    VCR.use_cassette('top_rated_content', :match_requests_on => [:path]) do
+    VCR.use_cassette('top_rated_content', :match_requests_on => [:method, :path]) do
       visit movies_discover_path
 
       click_button("Find Top-Rated Movies")
