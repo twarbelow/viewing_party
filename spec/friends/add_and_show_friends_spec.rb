@@ -25,5 +25,10 @@ RSpec.feature "As a user on the welcome page" do
       end
     end.to change { current_user.friends.count }.by(1)
     expect(friend.friends.include?(current_user)).to be_truthy
+    visit '/'
+    within(".friends") do
+      expect(page).to have_content("Friends")
+      expect(page).to have_content("John")
+    end
   end
 end

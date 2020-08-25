@@ -17,6 +17,7 @@ class ViewPartiesController < ApplicationController
     @viewing_party = ViewParty.new(movie_title: params[:title], duration: params[:runtime])
   end
 
+
   private
 
   def view_party_params
