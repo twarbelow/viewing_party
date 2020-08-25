@@ -32,8 +32,27 @@ class MovieDb
   end
 
   def movie_details(id)
+    combined_responses(id)
     response = conn.get("movie/#{id}")
     JSON.parse(response.body, symbolize_names: true)
+  end
+
+  def combined_responses(id)
+    info = movie_info_request(id)
+    reviews = movie_reviews_request(id)
+    credits = movie_credits_request(id)
+  end
+
+  def movie_info_request(id)
+    conn.get("movie/#{id}")
+  end
+
+  def movie_reviews_request(id)
+    conn.get("movie/#{id}/reviews")
+  end
+
+  def movie_credits_request(id)
+    conn.get("movie/#{id}/credits")
   end
 
   private
