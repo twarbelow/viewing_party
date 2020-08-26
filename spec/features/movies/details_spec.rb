@@ -44,6 +44,4 @@ RSpec.feature 'As a user' do
       expect(page).to have_css('.reviews')
     end
   end
-
-
 end

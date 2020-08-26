@@ -21,9 +21,14 @@ class MovieDb
     )
   end
 
+  def top_forty_rated
+    top_rated
+    first_40_results(@top1, @top2)
+  end
+
   def top_rated
-    response = conn.get('movie/top_rated')
-    JSON.parse(response.body, symbolize_names: true)[:results]
+    @top1 = conn.get("movie/top_rated?api_key=#{ENV['MOVIEDB_API_KEY']}&page=1")
+    @top2 = conn.get("movie/top_rated?api_key=#{ENV['MOVIEDB_API_KEY']}&page=2")
   end
 
   def movie_details(id)

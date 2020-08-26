@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_title: MyString
+  duration: 1.5
+  when: 2020-08-24 22:48:36
+  user: one
+
+two:
+  movie_title: MyString
+  duration: 1.5
+  when: 2020-08-24 22:48:36
+  user: two

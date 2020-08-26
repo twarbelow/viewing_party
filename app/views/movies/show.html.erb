@@ -1,3 +1,4 @@
+
 <h1 class="title"><%= @movie.title %></h1>
 <h3 class="tag-line"><%= @movie.tagline %></h3>
 <p class="tag-line">
@@ -42,4 +43,7 @@
         <p>Author: <%= review[:author] %></p>
         <br>
       <% end %>
+</section>
+<section class='create_viewing_party'>
+<%= link_to "Create Viewing Party", new_viewing_party_path(title: @movie.title, id: @movie.id, runtime: @movie.runtime) %>
 </section>
