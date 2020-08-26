@@ -26,7 +26,7 @@ class Movie
 
   def runtime
     hours = @total_minutes / 60
-    minutes = '%02d' % (@total_minutes % 60)
+    minutes = format('%<minutes>.2i', minutes: @total_minutes % 60)
     "#{hours}:#{minutes}"
   end
 
