@@ -29,9 +29,6 @@ class MovieDb
   def movie_details(id)
     parse_movie_responses(id)
     combine_movie_responses
-    # combined_responses(id)
-    # response = conn.get("movie/#{id}")
-    # JSON.parse(response.body, symbolize_names: true)
   end
 
   def parse_movie_responses(id)

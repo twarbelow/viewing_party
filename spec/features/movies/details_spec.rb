@@ -13,18 +13,19 @@ RSpec.feature 'As a user' do
       click_button "Find Movies"
 
       click_link "Star Wars"
-      # expect(page).to have_css('.title') @movie[:title]
+      save_and_open_page
+      expect(page).to have_css('.title')
       # within
-        # content
-        # expect to have class of string/float/etc
-      # expect(page).to have_css('.tag-line') @movie[:tagline]
-      # expect(page).to have_css('.vote-average') # @movie[:vote_average]
-      # expect(page).to have_css('.runtime') # @movie[:runtime] this is currently calculate in minutes
-      # expect(page).to have_css('.genre') # this is @movie[:genres]and then [:name] from each hash within [:genres]
-      # expect(page).to have_css('.overview') #this is @movie[:overview]
-      # expect(page).to have_css('.first-10-cast') # will need to GET /movie/{movie_id}/credits?APIKEYHERE --> withing that[:cast] then iterate through the first 10 hashes to get :character and :name
-      # expect(page).to have_css('.review-count') # will need to get to GET /movie/{movie_id}/reviews --> :total_results
-      # expect(page).to have_css('.reviews') # will need to GET /movie/{movie_id}/reviews --> this will return multiple pages, :total_pages will tell you how many --> get all pages, put together the :results arrays from each page like I did for search results, iterate through each hash in the results array to get :author and :content
+      #   content
+      #   expect to have class of string/float/etc
+      expect(page).to have_css('.tag-line')
+      expect(page).to have_css('.vote-average') # @movie[:vote_average]
+      expect(page).to have_css('.runtime') # @movie[:runtime] this is currently calculate in minutes
+      expect(page).to have_css('.genre') # this is @movie[:genres]and then [:name] from each hash within [:genres]
+      expect(page).to have_css('.overview') #this is @movie[:overview]
+      expect(page).to have_css('.first-10-cast') # will need to GET /movie/{movie_id}/credits?APIKEYHERE --> withing that[:cast] then iterate through the first 10 hashes to get :character and :name
+      expect(page).to have_css('.review-count') # will need to get to GET /movie/{movie_id}/reviews --> :total_results
+      expect(page).to have_css('.reviews') # will need to GET /movie/{movie_id}/reviews --> this will return multiple pages, :total_pages will tell you how many --> get all pages, put together the :results arrays from each page like I did for search results, iterate through each hash in the results array to get :author and :content
 
       # Movie Title
       # Vote Average of the movie

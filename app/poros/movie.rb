@@ -5,7 +5,7 @@ class Movie
               :release_date,
               :vote_average,
               :runtime,
-              :genre ,
+              :genres,
               :overview,
               :cast,
               :review_count,
@@ -18,11 +18,11 @@ class Movie
     @release_date = info[:release_date]
     @vote_average = info[:vote_average]
     @total_minutes = info[:runtime]
-    @genre = info[:genre]
+    @genres = info[:genres]
     @overview = info[:overview]
     @cast = info[:cast]
     @review_count = info[:total_results]
-    @reviews = info[:reviews]
+    @reviews = info[:results]
   end
 
   def runtime
@@ -30,4 +30,9 @@ class Movie
     minutes = "%02d" % (@total_minutes % 60)
     "#{hours}:#{minutes}"
   end
+
+  def first_10_cast
+    first_10 = cast.first(10)
+  end
+
 end
