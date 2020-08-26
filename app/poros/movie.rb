@@ -34,5 +34,4 @@ class Movie
   def first_10_cast
     first_10 = cast.first(10)
   end
-
 end
