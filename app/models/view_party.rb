@@ -10,4 +10,8 @@ class ViewParty < ApplicationRecord
     length = "#{hours}:#{minutes}"
     length
   end
+
+  def self.find_user_view_parties(user)
+    where("user_id =?", user.id)
+  end
 end
