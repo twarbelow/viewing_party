@@ -1,9 +1,9 @@
 class Invitee < ApplicationRecord
-  belongs_to :user, dependent: :destroy
-  belongs_to :view_party, dependent: :destroy
+  belongs_to :user
+  belongs_to :view_party
 
   def self.list_user_invitations(user)
-    where("user_id =?", user.id)
+    where('user_id =?', user.id)
   end
 
   def self.parties_user_is_invited_to(user)

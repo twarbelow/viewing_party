@@ -28,12 +28,12 @@ class MovieDb
 
   def top_forty_rated
     top_rated
-    first_40_results(@top_1, @top_2)
+    first_40_results(@top1, @top2)
   end
 
   def top_rated
-    @top_1 = conn.get("movie/top_rated?api_key=#{ENV['MOVIEDB_API_KEY']}&page=1")
-    @top_2 = conn.get("movie/top_rated?api_key=#{ENV['MOVIEDB_API_KEY']}&page=2")
+    @top1 = conn.get("movie/top_rated?api_key=#{ENV['MOVIEDB_API_KEY']}&page=1")
+    @top2 = conn.get("movie/top_rated?api_key=#{ENV['MOVIEDB_API_KEY']}&page=2")
   end
 
   def movie_details(id)

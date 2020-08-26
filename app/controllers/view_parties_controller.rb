@@ -20,6 +20,6 @@ class ViewPartiesController < ApplicationController
   private
 
   def view_party_params
-    params.require(:view_party).permit(:movie_title, :duration, :when, user_ids:[])
+    params.require(:view_party).permit(:movie_title, :duration, :when, user_ids: [])
   end
 end
