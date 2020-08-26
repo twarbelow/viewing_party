@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
   end
 
   def show
-    @movie = MovieDb.new.movie_details(params[:id])
+    info = MovieDb.new.movie_details(params[:id])
+    @movie = Movie.new(info)
   end
 end

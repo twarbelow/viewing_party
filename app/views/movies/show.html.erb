@@ -1,6 +1,54 @@
+<<<<<<< HEAD
 <h1><%= @movie[:title] %></h1>
 <h3><%= @movie[:tagline] %></h3>
 <%= @movie[:release_date] %><br>
 <%= @movie[:overview] %><br><br>
 
 <%= link_to "Create Viewing Party", new_viewing_party_path(title: @movie[:title], id: @movie[:id], runtime: @movie[:runtime]) %>
+=======
+<h1 class="title"><%= @movie.title %></h1>
+<h3 class="tag-line"><%= @movie.tagline %></h3>
+<p class="tag-line">
+  Original Release Date: <%= @movie.release_date %>
+</p>
+<p class="vote-average">
+  Average Rating: <%= @movie.vote_average %>
+</p>
+<p class="runtime">
+  Total Runtime: <%= @movie.runtime %>
+</p>
+<section class="genre">
+  Genres:
+  <ul>
+    <% @movie.genres.each do |genre| %>
+      <li><%= genre[:name] %></li>
+    <% end %>
+  </ul>
+</section>
+<section class="overview">
+  Description:
+  <ul>
+    <li><%= @movie.overview %></li>
+  </ul>
+</section>
+<section class="first-10-cast">
+  Primary Cast
+    <ul>
+      <% @movie.first_10_cast.each do |cast_member| %>
+        <li><%= cast_member[:character] %> played by <%= cast_member[:name] %></li>
+      <% end %>
+    </ul>
+</section>
+<p class="review-count">
+  Total Reviews: <%= @movie.review_count %>
+</p>
+<section class="reviews">
+  <p>Reviews</p>
+    <ul>
+      <% @movie.reviews.each do |review| %>
+        <li><%= review[:content] %></li>
+        <p>Author: <%= review[:author] %></p>
+        <br>
+      <% end %>
+</section>
+>>>>>>> a90c59f395b5079cb883c1d4e63ef39b152f8361

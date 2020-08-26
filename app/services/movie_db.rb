@@ -1,9 +1,4 @@
 class MovieDb
-  def initialize
-    @response1 = []
-    @response2 = []
-  end
-
   def search(query)
     search_responses(query)
     first_40_results(@response1, @response2)
@@ -37,8 +32,33 @@ class MovieDb
   end
 
   def movie_details(id)
-    response = conn.get("movie/#{id}")
-    JSON.parse(response.body, symbolize_names: true)
+    parse_movie_responses(id)
+    combine_movie_responses
+  end
+
+  def parse_movie_responses(id)
+    info = movie_info_request(id)
+    @info = JSON.parse(info.body, symbolize_names: true)
+    reviews = movie_reviews_request(id)
+    @reviews = JSON.parse(reviews.body, symbolize_names: true)
+    credits = movie_credits_request(id)
+    @credits = JSON.parse(credits.body, symbolize_names: true)
+  end
+
+  def combine_movie_responses
+    @credits.merge(@reviews).merge(@info)
+  end
+
+  def movie_info_request(id)
+    conn.get("movie/#{id}")
+  end
+
+  def movie_reviews_request(id)
+    conn.get("movie/#{id}/reviews")
+  end
+
+  def movie_credits_request(id)
+    conn.get("movie/#{id}/credits")
   end
 
   private

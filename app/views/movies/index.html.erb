@@ -16,7 +16,7 @@
     <ul>
       <% @results.each do |movie| %>
         <div class="result">
-          <p>Title: <%= link_to "#{movie.title}" %></p>
+          <p>Title: <%= link_to "#{movie.title}", movie_show_path(id: movie.id), method: :get %></p>
           <p>Average rating: <%= movie.vote_average %></p>
           <br>
         </div>
