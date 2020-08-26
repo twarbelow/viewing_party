@@ -8,14 +8,47 @@
   <p>
     Welcome <%= "#{current_user.first_name} #{current_user.last_name}!" %>
   </p>
+
+  <section class ="friends">
+    <br><h3>Friends</h3>
+    <% if current_user.friends.empty? %>
+      <%= "You currently have no friends" %>
+    <% else %>
+      <% current_user.friends.each do |friend| %>
+        <%= friend.first_name%>
+        <% end %>
+    <% end %>
+    </section>
+
+  <section class="add_friends">
+    <%= form_with(url: add_friends_path, method: "post", id: 'friends') do %>
+      <%= label_tag(:email_id, "Add friend (email address):") %>
+      <%= text_field_tag(:email_id) %>
+      <%= submit_tag("Add Friend") %>
+    <% end %>
+  </section>
+
+  <section class ="viewing_parties">
+    <br><h3>Viewing Parties</h3>
+    <% unless Invitee.parties_user_is_invited_to(current_user).empty? %>
+      <h4>Parties you have been invited to:</h4>
+      <% Invitee.parties_user_is_invited_to(current_user).each do |party| %>
+        Movie: <%= party.movie_title %><br>
+        When: <%= party.when %><br>
+        Length: <%= party.length %> <br>
+      <% end %>
+    <% end %>
+
+    <% unless ViewParty.find_user_view_parties(current_user).empty? %>
+    <h4>Your Viewing Parties</h4>
+      <% ViewParty.find_user_view_parties(current_user).each do |party| %>
+        Movie: <%= party.movie_title %><br>
+        When: <%= party.when %><br>
+        Length: <%= party.length %><br>
+      <% end %>
+    <% end %>
+  </section>
+
 <% else %>
   <%= link_to "Sign in with Google", "/auth/google_oauth2" %>
 <% end %>
-
-<section class="add_friends">
-  <%= form_with(url: add_friends_path, method: "post", id: 'friends') do %>
-    <%= label_tag(:email_id, "Add friend (email address):") %>
-    <%= text_field_tag(:email_id) %>
-    <%= submit_tag("Add Friend") %>
-  <% end %>
-</section>
