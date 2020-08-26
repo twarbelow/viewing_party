@@ -1,6 +1,6 @@
 class Movie
   attr_reader :id,
-              :title ,
+              :title,
               :tagline,
               :release_date,
               :vote_average,
@@ -27,11 +27,11 @@ class Movie
 
   def runtime
     hours = @total_minutes / 60
-    minutes = "%02d" % (@total_minutes % 60)
+    minutes = '%02d' % (@total_minutes % 60)
     "#{hours}:#{minutes}"
   end
 
   def first_10_cast
-    first_10 = cast.first(10)
+    cast.first(10)
   end
 end
