@@ -7,14 +7,16 @@
 <p class="overview"><%= @movie.overview %></p>
 <section class="first-10-cast">
   <% @movie.first_10_cast.each do |cast_member| %>
-  <%= cast_member.name %>
-  <%= cast_member.character %>
+    <%= cast_member.name %>
+    <%= cast_member.character %>
+  <% end %>
 </section>
 <p class="tag-line"><%= @movie.review_count %></p>
 <section class="tag-line">
   <% @movie.reviews.each do |review| %>
-  <%= review.author %>
-  <%= review.body %>
+    <%= review.author %>
+    <%= review.body %>
+  <% end %>
 </section>
 
 
