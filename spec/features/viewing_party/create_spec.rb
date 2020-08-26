@@ -6,7 +6,7 @@ RSpec.feature 'As a user' do
   end
 
   scenario "On the movie show page, you can create a viewing party for that movie" do
-    VCR.use_cassette('top_rated_content') do
+    VCR.use_cassette('top_rated_movies') do
       visit movies_discover_path
 
       click_button("Find Top-Rated Movies")
@@ -17,8 +17,8 @@ RSpec.feature 'As a user' do
 
       expect(page).to have_content("The Godfather")
       expect(page).to have_content("An offer you can't refuse")
-      expect(page).to have_button("Create Viewing Party")
-      click_button "Create Viewing Party"
+      expect(page).to have_link("Create Viewing Party")
+      click_link "Create Viewing Party"
       expect(page).to have_content("The Godfather")
     end
 

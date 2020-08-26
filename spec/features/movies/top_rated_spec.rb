@@ -8,7 +8,6 @@ RSpec.describe "as an authorized user" do
       click_button "Discover Movies"
       click_button("Find Top-Rated Movies")
       expect(page.all('table tr').count).to eq(41)
-      save_and_open_page
     end
   end
 end
