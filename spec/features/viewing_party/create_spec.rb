@@ -6,7 +6,7 @@ RSpec.feature 'As a user' do
   end
 
   scenario "On the movie show page, you can create a viewing party for that movie" do
-    VCR.use_cassette('top_rated_movies') do
+    VCR.use_cassette('top_rated_movies', :match_requests_on => [:method, :path]) do
       visit movies_discover_path
 
       click_button("Find Top-Rated Movies")

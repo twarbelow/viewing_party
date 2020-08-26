@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "as an authorized user" do
   it "I can go to a discover movies page that has a link to find top movies and a text field to perform a keyword search with a 'Find Movies' button" do
-    VCR.use_cassette('top_rated_movies') do
+    VCR.use_cassette('top_rated_movies', :match_requests_on => [:method, :path]) do
       login_as_user
 
       click_button "Discover Movies"
