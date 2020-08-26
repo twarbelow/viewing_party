@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-<h1><%= @movie[:title] %></h1>
-<h3><%= @movie[:tagline] %></h3>
-<%= @movie[:release_date] %><br>
-<%= @movie[:overview] %><br><br>
 
-<%= link_to "Create Viewing Party", new_viewing_party_path(title: @movie[:title], id: @movie[:id], runtime: @movie[:runtime]) %>
-=======
 <h1 class="title"><%= @movie.title %></h1>
 <h3 class="tag-line"><%= @movie.tagline %></h3>
 <p class="tag-line">
@@ -51,4 +44,6 @@
         <br>
       <% end %>
 </section>
->>>>>>> a90c59f395b5079cb883c1d4e63ef39b152f8361
+<section class='create_viewing_party'>
+<%= link_to "Create Viewing Party", new_viewing_party_path(title: @movie.title, id: @movie.id, runtime: @movie.runtime) %>
+</section>
