@@ -4,7 +4,6 @@ class Movie
               :tagline,
               :release_date,
               :vote_average,
-              :runtime,
               :genres,
               :overview,
               :cast,
