@@ -5,7 +5,7 @@
   <section class ="friends">
     <br><h3>Friends</h3>
     <% if current_user.friends.empty? %>
-      <%= "Add Friends and Create Viewing Parties!" %>
+      <%= "You currently have no friends" %>
     <% else %>
       <% current_user.friends.each do |friend| %>
         <%= friend.first_name%>

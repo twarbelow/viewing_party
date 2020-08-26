@@ -11,7 +11,7 @@ RSpec.feature 'As a user' do
 
       click_button("Find Top-Rated Movies")
     end
-    
+
     VCR.use_cassette('godfather_content') do
       click_link "The Godfather"
 
@@ -19,6 +19,4 @@ RSpec.feature 'As a user' do
       expect(page).to have_content("An offer you can't refuse")
     end
   end
-
-
 end

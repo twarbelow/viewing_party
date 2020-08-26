@@ -24,6 +24,7 @@ RSpec.feature "As a user on the welcome page" do
         click_button("Add Friend")
       end
     end.to change { current_user.friends.count }.by(1)
+
     expect(friend.friends.include?(current_user)).to be_truthy
     visit '/'
     within(".friends") do
@@ -31,4 +32,16 @@ RSpec.feature "As a user on the welcome page" do
       expect(page).to have_content("John")
     end
   end
-end
+
+  scenario 'If the email address is not correlated with a user in the database, a flash message notifies the current user that no friend was added' do
+    visit '/'
+    expect do
+      within("form#friends") do
+        fill_in :email_id, with: "typo@gmail.com"
+        click_button("Add Friend")
+      end
+    end.not_to change { current_user.friends.count }
+    expect(friend.friends.include?(current_user)).to be_falsey
+  end
+
+  end

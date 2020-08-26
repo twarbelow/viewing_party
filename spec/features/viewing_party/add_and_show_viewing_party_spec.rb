@@ -39,7 +39,6 @@ RSpec.feature "As a user on the welcome page" do
     visit '/'
     within(".viewing_parties") do
       expect(page).to have_content("Frozen")
-      save_and_open_page
     end
   end
 end
