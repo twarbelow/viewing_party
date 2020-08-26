@@ -6,11 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
- Invitee.destroy_all
+Invitee.destroy_all
 ViewParty.destroy_all
-
- Friendship.destroy_all
- User.destroy_all
+Friendship.destroy_all
+User.destroy_all
 #drop create, migrate,seed instead of destroy.all
 
 ## Users

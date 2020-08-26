@@ -14,7 +14,6 @@ RSpec.feature "As a user on the welcome page" do
   end
 
   scenario "There is a form field to add a friend by email address" do
-
     visit "/"
     expect(page).to have_button("Add Friend")
     friend
@@ -43,5 +42,4 @@ RSpec.feature "As a user on the welcome page" do
     expect(friend.friends.include?(current_user)).to be_falsey
     expect(page).to have_content("There is no user with that email address")
   end
-
-  end
+end
