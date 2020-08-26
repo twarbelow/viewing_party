@@ -1,7 +1,21 @@
-<h1><%= @movie[:title] %></h1>
-<h3><%= @movie[:tagline] %></h3>
-<%= @movie[:release_date] %><br>
-<%= @movie[:overview] %><br><br>
+<h1><%= @movie.title %></h1>
+<h3><%= @movie.tagline %></h3>
+<p class="tag-line"><%= @movie.release_date %></p>
+<p class="vote-average"><%= @movie.vote_average %></p>
+<p class="runtime"><%= @movie.runtime %></p>
+<p class="genre"><%= @movie.genre %></p>
+<p class="overview"><%= @movie.overview %></p>
+<section class="first-10-cast">
+  <% @movie.first_10_cast.each do |cast_member| %>
+  <%= cast_member.name %>
+  <%= cast_member.character %>
+</section>
+<p class="tag-line"><%= @movie.review_count %></p>
+<section class="tag-line">
+  <% @movie.reviews.each do |review| %>
+  <%= review.author %>
+  <%= review.body %>
+</section>
 
 
 <!-- expect(page).to have_css('.title')
