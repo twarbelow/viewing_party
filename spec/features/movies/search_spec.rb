@@ -20,7 +20,7 @@ RSpec.describe "as an authorized user" do
   end
 
   it "I can search the movies and see the first 40 results" do
-    VCR.use_cassette('star_wars_search') do
+    VCR.use_cassette('star_wars_search', :match_requests_on => [:method, :path]) do
       stub_omniauth
       visit root_path
       click_link "Sign in with Google"
