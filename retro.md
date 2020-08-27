@@ -29,3 +29,33 @@ Communication
 Other
 
 - I *really* appreciated your thoughtful response to my message about being overwhelmed after the weekend. It made me feel like I was in a safe environment, and it helped me get back on track. Thank you!
+
+Lito
+
+Process
+
+- What went well?
+  - We accomplished the majority of the project scope, with reasonable testing and with a solid organizational structure. 
+  - We adjusted to changing schedule demands
+- What could be improved?
+  - With this many classes, services, etc., diagramming a high level design would have been a good idea. Also deploying more regularly to Heroku for bug testing, etc.
+  - There wasn’t a clear scope of work throughout the project duration.
+- What did not go well?
+  - Not enough communication. 
+  - Too many irons in the fire at once.Finish something completely before moving on to the next. 
+- What feedback do you have for your teammate(s) that might help them in future projects/on the job?
+  - Let me know ahead of time about your schedule. It’s hard to pair if we’re not regularly available at the same time. When I didn't hear from you, I felt like I needed to keep moving on with the project. 
+
+Communication
+
+- What went well?
+  - We were quick to respond to questions/comments on PRs, bugs that we discovered, etc. 
+- What could be improved?
+  - Lack of regular status check-ins led to a bit of a vacuum on direction. It didn’t lead to redundant work efforts, but it did lead to misgivings and communication pitfalls. 
+- What did not go well?
+  - I often felt that the work I delivered did not meet my partners expectations, both in the scope of what I had worked on and the quality of the code. 
+  - Lots of miscommunications! We never got in sync on meeting together, which led to further miscommunications about work load, status updates, etc. 
+- What feedback do you have for your teammate(s) that might help them in future projects/on the job?
+  - Neither of us did a good job of regularly communicating. I would say try to share schedule constraints in the DTR, or as soon as you know. There were a few instances where project work time had to be rescheduled at the 11th hour.
+  - This project was a difficult process. Not having scheduled check-ins made it difficult to regularly catch up on our work progress. Not having a consistent schedule made it difficult to both work together and to clarify what we’re working on independently.  
+
