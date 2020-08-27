@@ -2,7 +2,7 @@ class MoviesController < ApplicationController
   before_action :verify_current_user
 
   def index
-    @results = MovieDb.new.search(params[:query]).map { |movie| Movie.new(movie) } unless params[:query].nil?
+    @results = MovieDb.new.search(params[:query]).map { |movie| Movie.new(movie) } unless params[:query].blank?
   end
 
   def top_rated
