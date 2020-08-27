@@ -36,6 +36,7 @@
         Movie: <%= party.movie_title %><br>
         When: <%= party.when %><br>
         Length: <%= party.length %> <br>
+        <%= button_to "Add to Google Calendar", events_path(party) %>
       <% end %>
     <% end %>
 

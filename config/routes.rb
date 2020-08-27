@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   get "movie_show", to: "movies#show"
   get "new_viewing_party", to: "view_parties#new"
   post "view_parties", to: 'view_parties#create'
+
+  resource :events, only: :create
 end
