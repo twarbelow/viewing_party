@@ -5,7 +5,7 @@ class ViewPartiesController < ApplicationController
     vp = ViewParty.new(view_party_params)
     vp.user_id = current_user.id
     if vp.save
-      flash[:notice] = "Successfully created a viewing party on #{vp.when}!"
+      flash[:notice] = "Successfully created a viewing party on #{vp.when.localtime}!"
       redirect_to root_path
     else
       flash[:error] = vp.errors.full_sentences
