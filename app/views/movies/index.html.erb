@@ -4,7 +4,7 @@
     <%= button_to "Find Top-Rated Movies", movies_top_rated_path, method: :get %>
 </section>
 <section class="find-movies">
-  <%= form_with(url: movies_search_results_path, method: "get") do %>
+  <%= form_with(url: movies_search_results_path, method: "get", local: true) do %>
     <%= label_tag(:query, "Search All Movies: ") %>
     <%= text_field_tag(:query) %>
     <br>
