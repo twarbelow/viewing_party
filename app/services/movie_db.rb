@@ -6,10 +6,10 @@ class MovieDb
 
   def first_40_results(response1, response2)
     page1 = JSON.parse(response1.body, symbolize_names: true)
-    logger.debug page1
+    logger.debug "Page 1", page1
     page1 = page1[:results]
     page2 = JSON.parse(response2.body, symbolize_names: true)
-    logger.debug page2
+    logger.debug "Page 2", page2
     page2 = page2[:results]
     page1.concat(page2)
   end
