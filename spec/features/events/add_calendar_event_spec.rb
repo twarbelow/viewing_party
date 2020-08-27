@@ -25,6 +25,7 @@ RSpec.feature "As a user on the welcome page" do
     visit '/'
     within('.viewing_parties') do
       expect(page).to have_button("Add to Google Calendar")
+      click_button("Add to Google Calendar")
     end
   end
 end

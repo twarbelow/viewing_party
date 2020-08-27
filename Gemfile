@@ -19,7 +19,7 @@ gem 'faraday'
 gem 'figaro'
 gem 'omniauth-google-oauth2'
 
-gem 'google-api-client', '~> 0.34', require: 'google/api_client'
+gem 'google-api-client', require: 'google/apis/calendar_v3'
 
 group :development, :test do
   gem 'pry'
