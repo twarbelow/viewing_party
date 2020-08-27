@@ -20,6 +20,9 @@ RSpec.feature 'As a user' do
       expect(page).to have_link("Create Viewing Party")
       click_link "Create Viewing Party"
       expect(page).to have_content("The Godfather")
+      fill_in "Duration", with: "178"
+      fill_in "Date and Time", with: Time.new(2022, 01, 02, 12)
+      click_on "Create View party"
     end
 
 
