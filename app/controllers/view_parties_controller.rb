@@ -8,7 +8,7 @@ class ViewPartiesController < ApplicationController
       flash[:notice] = "Successfully created a viewing party on #{vp.when.localtime}!"
       redirect_to root_path
     else
-      flash[:error] = vp.errors.full_sentences
+      flash[:error] = 'Party not successfully created. Please try again.'
       render :new
     end
   end
