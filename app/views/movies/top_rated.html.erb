@@ -15,14 +15,12 @@
     <th> Movie Name </th>
     <th> Vote Average </th>
     <th> Summary </th>
-    <th> Poster </th>
   </tr>
 <% @movies.each do |movie| %>
   <tr>
-    <td><%= link_to "#{movie[:title]}", movie_show_path(id: movie[:id]) %></td>
-    <td><%= movie[:vote_average] %></td>
-    <td><%= movie[:overview] %></td>
-    <td><%= movie[:poster_path] %></td>
+    <td><%= link_to "#{movie.title}", movie_show_path(id: movie.id) %></td>
+    <td><%= movie.vote_average %></td>
+    <td><%= movie.overview %></td>
   </tr>
 <% end %>
 </table>

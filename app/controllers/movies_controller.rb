@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
   end
 
   def top_rated
-    @movies = MovieDb.new.top_forty_rated
+    @movies = MovieDb.new.top_forty_rated.map { |movie| Movie.new(movie) }
   end
 
   def show
