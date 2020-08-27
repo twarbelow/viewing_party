@@ -24,7 +24,7 @@ Communication
   - I fell off of slack on the weekend without notice.
   - I would have appreciated more frequent updates about where you were in your work, especially at EOD.
 - What feedback do you have for your teammate(s) that might help them in future projects/on the job?
-  - At least for me, I think erring on the side of over communciation at the beginning of a project would be good to practice. It seems easier to tone done the communication than ramp it over, and clarity really helps a project move along. One thing I learned is that I would benefit from communicating that to future teammates!
+  - At least for me, I think erring on the side of over communciation at the beginning of a project would be good to practice. It seems easier to tone down the communication than ramp it over, and clarity really helps a project move along. One thing I learned is that I would benefit from communicating that to future teammates!
 
 Other
 
