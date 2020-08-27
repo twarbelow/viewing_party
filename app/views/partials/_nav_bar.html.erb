@@ -1,4 +1,6 @@
 <% if current_user %>
+  <section class="home">
+    <%= link_to "Dashboard", root_path %>
   <section class ="movies">
     <%= button_to "Discover Movies", movies_discover_path, method: :get %>
   </section>
