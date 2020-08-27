@@ -5,11 +5,11 @@
   <%= f.label :movie_title %>
   <%= f.text_field :movie_title, :readonly => true %><br>
   <%= f.label :duration %>
-  <%= f.number_field :duration %><br>
+  <%= f.number_field :duration, :value => @viewing_party.duration.to_i %><br>
   <%= f.label :when, "Date and Time" %>
   <%= f.datetime_local_field :when %><br>
   <% if current_user.friends.count.zero? %>
-    <p> You dont have any friends </p>
+    <p> You don't have any friends </p>
   <% else %>
     <%= f.collection_check_boxes(:user_ids, current_user.friends, :id, :first_name) %>
   <% end %>

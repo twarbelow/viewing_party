@@ -8,7 +8,8 @@ class Movie
               :overview,
               :cast,
               :review_count,
-              :reviews
+              :reviews,
+              :total_minutes
 
   def initialize(info)
     @id = info[:id]
